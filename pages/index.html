@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<title>AstroAndrew Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  /* Kurale was another one I wanted to try */
+body,h1,h2,h3,h4,h5,h6 {font-family: "Righteous", sans-serif}
+
+body {
+  height: 100%;
+  line-height: 1.8;
+  background-color: gray;
+}
+
+html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/images/background.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+.header-color{color:#fff!important;background-color:#3a4750!important}
+
+.dark-page-color{color:#fff!important;background-color:#5b9194!important}
+.light-page-color{color:#fff!important;background-color:#93b6b8!important}
+.image-center {max-width:100%;height:auto;text-align:center;border-radius:8px;}
+.add-rounded-edge {border-radius:8px;}
+
+.hover:hover{color:#000!important;background-color:#718898!important}
+  
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar header-color w3-card" id="myNavbar">
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#home" class="w3-bar-item w3-button hover">HOME</a>
+      <a href="#about" class="w3-bar-item w3-button hover"><i class="fa fa-question-circle"></i> ABOUT</a>
+      <a href="#projects" class="w3-bar-item w3-button hover"><i class="fa fa-folder"></i> PROJECTS</a>
+      <a href="#photography" class="w3-bar-item w3-button hover"><i class="fa fa-camera"></i> PHOTOGRAPHY</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
+  <a href="#photography" onclick="w3_close()" class="w3-bar-item w3-button">PHOTOGRAPHY</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-right w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Andrew Boyer</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Andrew Boyer</span><br>
+    <span class="w3-large">Personal website that I'm slowly working on when I have time</span>
+    <p><a href="#about" class="w3-button header-color hover w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">About me</a></p>
+  </div> 
+  <div class="w3-display-bottomright w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <div class="w3-display-bottommiddle w3-text-grey w3-xxlarge" >
+    <i class="fa fa-arrow-down"></i>
+  </div>
+</header>
+
+<!-- Photography Section -->
+<div class="w3-container dark-page-color" style="padding:128px 16px" id="photography">
+  <h3 class="w3-center">PHOTOGRAPHY</h3>
+  <p class="w3-center w3-large">Some of my favorite photos of wild animals that I've taken</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-01.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-02.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-03.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-04.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-05.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-06.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-07.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-08.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-09.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-10.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-11.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-12.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-13.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-14.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-15.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-16.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-17.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-18.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-19.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-20.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-21.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-22.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-23.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-24.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-25.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-26.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-27.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-28.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-29.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-30.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-31.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-32.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-33.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-34.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-35.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-36.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-37.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-38.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-39.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-40.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-41.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-42.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-43.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-44.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-45.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-46.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-47.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-48.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-49.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-50.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-51.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-52.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-53.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-54.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-55.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-56.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-57.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-58.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-59.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-60.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-61.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-62.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-63.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-64.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-65.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-65.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/images/conconully/Conconully-67.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity add-rounded-edge" alt="">
+      <figcaption class="w3-center">Caption:</figcaption>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
